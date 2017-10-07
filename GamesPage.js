@@ -1,13 +1,14 @@
 export default {
+  name: 'GamesPage',
   template: `
     <div>
-     <h1>Async Component</h1>
+     <h1>Games Page</h1>
      <p>{{ message }}</p>
     </div>
   `,
   data() {
     return {
-      message: 'Oh hai from the async component'
+      message: 'Oh hai from the games page'
     }
   }
 };

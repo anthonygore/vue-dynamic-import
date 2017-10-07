@@ -6,10 +6,23 @@
 </head>
 <body>
 <div id="app">
-    <my-component></my-component>
+    <nav>
+        <a href="BooksPage.js" @click.prevent="navigate">Books</a>
+        <a href="MoviesPage.js" @click.prevent="navigate">Movies</a>
+        <a href="GamesPage.js" @click.prevent="navigate">Video Games</a>
+    </nav>
+    <component :is="currentPage"></component>
 </div>
 </body>
-<script type="module" src="app.js"></script>
-<!--Fallback-->
-<!--<script nomodule src="https://unpkg.com/import.js@latest" data-main="/dist/build.js"></script>-->
+<script type="text/javascript">
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    try {
+        Function('import("")');
+        script.src= "app.js";
+    } catch(e) {
+        script.src= "dist/build.js";
+    }
+    document.body.appendChild(script);
+</script>
 </html>
