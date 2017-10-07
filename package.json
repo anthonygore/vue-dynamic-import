@@ -1,0 +1,24 @@
+{
+  "name": "native-sfc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node ./server.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-dynamic-import-node": "^1.1.0",
+    "babel-preset-env": "^1.6.0",
+    "http-server": "^0.10.0",
+    "http2": "^3.3.6",
+    "mime": "^1.4.0",
+    "vue": "^2.4.2",
+    "webpack": "^3.5.6"
+  }
+}
