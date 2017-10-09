@@ -2,5 +2,5 @@
   "presets": [
     ["env", { "modules": false }]
   ],
-  "plugins": ["dynamic-import-node"]
+  "plugins": ["syntax-dynamic-import"]
 }

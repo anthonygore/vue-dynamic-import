@@ -1,7 +1,7 @@
 new Vue({
   el: '#app',
   data: {
-    route: '/BooksPage.js'
+    route: 'pages/BooksPage.js'
   },
   methods: {
     navigate(event) {
@@ -9,9 +9,13 @@ new Vue({
     }
   },
   computed: {
-    currentPage() {
-      console.log(this.route);
-      return () => import(this.route);
+    page() {
+      // console.log(this.route);
+      return () => import(
+        /* webpackChunkName: "pages/[request]" */
+        `./pages/${this.route.split('/').pop()}`
+      )
+        .then(m => m.default);
     }
   }
 });
