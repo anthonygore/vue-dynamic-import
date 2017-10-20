@@ -1,7 +1,7 @@
 new Vue({
   el: '#app',
   data: {
-    route: 'pages/BooksPage.js'
+    route: '/pages/BooksPage.js'
   },
   methods: {
     navigate(event) {
@@ -10,12 +10,11 @@ new Vue({
   },
   computed: {
     page() {
-      // console.log(this.route);
+      //console.log(this.route); // Uncomment this and it works
       return () => import(
         /* webpackChunkName: "pages/[request]" */
         `./pages/${this.route.split('/').pop()}`
-      )
-        .then(m => m.default);
+      );
     }
   }
 });
